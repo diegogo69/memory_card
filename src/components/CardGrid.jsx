@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Card from "./Card";
 
-function CardGrid({ pokeList, increaseScore, endGame }) {
+function CardGrid({ pokeList, increaseScore, endGame, clickCard }) {
   return (
     <div>
       {pokeList.map((poke) => {
@@ -14,6 +14,7 @@ function CardGrid({ pokeList, increaseScore, endGame }) {
             url={url}
             increaseScore={increaseScore}
             endGame={endGame}
+            clickCard={clickCard}
           />
         );
       })}

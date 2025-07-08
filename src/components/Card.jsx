@@ -1,15 +1,10 @@
 import { useState } from "react";
 
-function Card({ name, url, increaseScore, endGame }) {
+function Card({ name, url, increaseScore, endGame, clickCard }) {
   const [isClicked, setIsClicked] = useState(false);
 
   const clickHandler = () => {
-    if (!isClicked) {
-      setIsClicked(!isClicked);
-      increaseScore();
-    } else {
-      endGame();
-    }
+    clickCard(name);
   };
 
   console.log(url);
