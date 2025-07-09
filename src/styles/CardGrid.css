@@ -9,9 +9,16 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    padding: 1rem;
     border: 3px solid var(--front-color);
     border-radius: 1rem;
-    padding: 1rem;
+    box-shadow: 0 0 .8rem var(--shadow);
+    background-color: var((--back-color));
+    transition: transform .2s;
+}
+
+.card:hover {
+    transform: perspective(1000px) scale(1.05);
 }
 
 .card-title {

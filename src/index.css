@@ -5,6 +5,7 @@
     --black: #18181b;
     --front-color: var(--white);
     --back-color: var(--black);
+    --shadow: rgba(0, 0, 0, 0.8);
 
     color: var(--front-color);
     background-color: var(--back-color);
@@ -18,7 +19,8 @@
 @media (prefers-color-scheme: light) {
     :root {
         --front-color: var(--black);
-        --back-color: var(--white)
+        --back-color: var(--white);
+        --shadow: rgba(0, 0, 0, 0.2);
     }
 
 }

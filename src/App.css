@@ -13,14 +13,17 @@ svg {
 header {
   display: flex;
   justify-content: space-between;
-  padding: 2rem;
+  padding: 1rem 2rem;
+  box-shadow: 0 0 .5rem var(--shadow);
 }
 
 header .score-board {
   display: flex;
   gap: 1rem;
+  align-items: center;
+  font-size: 1.2rem;
 }
 
 main {
-  padding: 0 2rem;
+  padding: 2rem;
 }
