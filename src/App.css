@@ -1,10 +1,26 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 svg {
   height: 4rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+header .score-board {
+  display: flex;
+  gap: 1rem;
+}
+
+main {
+  padding: 0 2rem;
 }

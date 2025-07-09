@@ -21,11 +21,13 @@ function Card({ name, url, increaseScore, endGame, clickCard }) {
     fetchImg();
   }, []);
 
+  const title = name ? name[0].toUpperCase() + name.slice(1) : "";
+
   return (
-    <div onClick={clickHandler}>
-      <div className="card-title">{name}</div>
+    <div className="card" onClick={clickHandler}>
+      <h2 className="card-title">{title}</h2>
       <div className="card-img">
-        <img src={imgsrc} alt={name} />
+        {imgsrc && <img src={imgsrc} alt={title} />}
       </div>
     </div>
   );

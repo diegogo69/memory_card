@@ -1,5 +1,24 @@
 :root {
-  color-scheme: light dark;
-  color: rgb(255, 255, 255);
-  background-color: #242424;
+    color-scheme: light dark;
+
+    --white: #fafafa;
+    --black: #18181b;
+    --front-color: var(--white);
+    --back-color: var(--black);
+
+    color: var(--front-color);
+    background-color: var(--back-color);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --front-color: var(--black);
+        --back-color: var(--white)
+    }
+
 }

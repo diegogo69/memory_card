@@ -37,6 +37,7 @@ function App() {
 
   useEffect(() => {
     const setpoke = async () => {
+      console.log('fetching pokes')
       const pokes = await getPokeList(pokeNo, pokeOffset);
       setPokeList(pokes);
     };
@@ -106,11 +107,18 @@ function App() {
   };
 
   return (
-    <div>
-      <div>Score: {score}</div>
-      <div>Best score: {bestScore}</div>
-      <CardGrid {...props} />
-    </div>
+    <>
+      <header>
+        <h1>Memory Card</h1>
+        <div className="score-board">
+          <div className='score'><strong>Score</strong>: {score}</div>
+          <div className='best-score'><strong>Best score</strong>: {bestScore}</div>
+        </div>
+      </header>
+      <main>
+        <CardGrid {...props} />
+      </main>
+    </>
   );
 }
 

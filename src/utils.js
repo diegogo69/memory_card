@@ -19,6 +19,7 @@ const shuffleArray = (array) => {
 
 const getPokeList = async (limit, offset) => {
   const url = `https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`;
+  console.log(url);
   const pokeQuery = await getData(url);
 
   return pokeQuery.results;

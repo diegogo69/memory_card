@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import Card from "./Card";
+import '../styles/CardGrid.css'
 
 function CardGrid({ pokeList, increaseScore, endGame, clickCard }) {
   return (
-    <div>
+    <div className="card-grid">
       {pokeList.map((poke) => {
         console.log(poke);
         const { name, url } = poke;
