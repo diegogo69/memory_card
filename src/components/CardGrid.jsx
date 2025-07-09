@@ -1,6 +1,5 @@
-import { useEffect, useState } from "react";
 import Card from "./Card";
-import '../styles/CardGrid.css'
+import "../styles/CardGrid.css";
 
 function CardGrid({ pokeList, increaseScore, endGame, clickCard }) {
   return (

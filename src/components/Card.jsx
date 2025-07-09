@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getData } from "../utils";
 
-function Card({ name, url, increaseScore, endGame, clickCard }) {
+function Card({ name, url, clickCard }) {
   const [imgsrc, setImgsrc] = useState("");
 
   const clickHandler = () => {
@@ -16,7 +16,7 @@ function Card({ name, url, increaseScore, endGame, clickCard }) {
       const pokeSprites = pokeData.sprites;
       const pokeImg = pokeSprites.other.dream_world.front_default;
       console.log(pokeSprites);
-      setImgsrc(pokeImg)
+      setImgsrc(pokeImg);
     };
     fetchImg();
   }, []);
